@@ -77,7 +77,7 @@ if prompt:=st.chat_input(placeholder="What is machine learning?"):
             verbose=True,
             handle_parsing_errors=True,
             max_iterations=5,
-            early_stopping_method="generate"
+            early_stopping_method="force"
         )
 
         with st.chat_message("assistant"):
