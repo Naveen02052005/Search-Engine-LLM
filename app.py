@@ -23,7 +23,7 @@ arxiv = ArxivQueryRun(api_wrapper=api_wrapper_arxiv)
 
 search = DuckDuckGoSearchResults(name="Search")
 
-st.title("🦜 Langchain - Chat with search")
+st.title("🔎 Langchain - Chat with search")
 
 
 ## Sidebar for settings
