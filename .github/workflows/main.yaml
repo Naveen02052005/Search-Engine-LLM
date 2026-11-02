@@ -15,4 +15,4 @@ jobs:
       - name: Push to hub
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
-        run: git --force push https://Naveen020505:$HF_TOKEN@huggingface.co/spaces/Naveen020505/Search_Engine_llm main
+        run: git push --force https://Naveen020505:$HF_TOKEN@huggingface.co/spaces/Naveen020505/Search_Engine_llm main
