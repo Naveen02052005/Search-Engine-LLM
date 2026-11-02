@@ -79,24 +79,19 @@
 
 
 
-import arxiv
 import streamlit as st
+from langchain_community.utilities import ArxivAPIWrapper
 
 try:
-    client = arxiv.Client()
-
-    search = arxiv.Search(
-        query="machine learning",
-        max_results=1,
-        sort_by=arxiv.SortCriterion.Relevance
+    wrapper = ArxivAPIWrapper(
+        top_k_results=1,
+        doc_content_chars_max=250
     )
 
-    results = list(client.results(search))
+    result = wrapper.run("machine learning")
 
-    st.write("Arxiv test successful!")
-
-    for paper in results:
-        st.write("Title:", paper.title)
+    st.success("LangChain Arxiv wrapper successful!")
+    st.write(result)
 
 except Exception as e:
-    st.error(f"Arxiv error: {type(e).__name__}: {e}")
+    st.error(f"{type(e).__name__}: {e}")
