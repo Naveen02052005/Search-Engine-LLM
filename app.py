@@ -10,6 +10,12 @@ import os
 from dotenv import load_dotenv
 load_dotenv()
 
+import arxiv
+import streamlit as st
+
+st.write("Arxiv version:", arxiv.__version__)
+st.write("Has Search:", hasattr(arxiv, "Search"))
+st.write("Has Client:", hasattr(arxiv, "Client"))
 
 import wikipedia
 
