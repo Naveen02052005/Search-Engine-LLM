@@ -76,7 +76,7 @@ if prompt:=st.chat_input(placeholder="What is machine learning?"):
             tools=tools,
             verbose=True,
             handle_parsing_errors=True,
-            max_iterations=10,
+            max_iterations=20,
             early_stopping_method="force"
         )
 
