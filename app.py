@@ -56,7 +56,16 @@ if prompt:=st.chat_input(placeholder="What is machine learning?"):
 
         prompt_template = ChatPromptTemplate.from_messages(
             [
-                ("system","You are a helpful assistant who can search the web, Arxiva and Wikipedia."),
+                ( "system",
+                    """You are a helpful research assistant.
+                
+                    Use the available tools only when necessary.
+                    For research paper questions, use Arxiv.
+                    Do not repeat the same or similar searches.
+                    Use at most 2 tool calls for a normal research question.
+                    After collecting sufficient information, stop searching
+                    and provide a clear, concise answer based on the results.
+                    Never continue searching unnecessarily."""),
                 ("human","{input}"),
                 MessagesPlaceholder(variable_name="agent_scratchpad")
             ]
