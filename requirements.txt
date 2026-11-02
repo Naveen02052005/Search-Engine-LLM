@@ -1,0 +1,34 @@
+langchain
+python-dotenv
+ipykernel
+langchain-community
+langchain-core
+pypdf
+bs4
+arxiv
+pymupdf
+wikipedia
+langchain-text-splitters
+langchain-openai
+chromadb
+sentence_transformers
+langchain_huggingface
+faiss-cpu
+langchain_chroma
+duckdb
+pandas
+openai
+langchain-groq
+duckduckgo_search
+pymupdf
+arxiv
+wikipedia
+mysql-connector-python
+SQLAlchemy
+validators ## It helps to validate url
+youtube_transcript_api  # With this when ever we give youtube url we will be able to read entire transcript of entire video
+unstructured
+pytube
+numexpr
+huggingface_hub
+gradio
