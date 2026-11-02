@@ -76,7 +76,7 @@ if prompt:=st.chat_input(placeholder="What is machine learning?"):
             tools=tools,
             verbose=True,
             handle_parsing_errors=True,
-            max_iterations=20,
+            max_iterations=10,
             early_stopping_method="force"
         )
 
@@ -85,4 +85,4 @@ if prompt:=st.chat_input(placeholder="What is machine learning?"):
             response = search_agent.invoke({"input":prompt},config={"callbacks":[st_cb]})
             output = response["output"]
             st.write(output)
-            st.session_state.messages.append({'role':'assistant','content':response})
+            st.session_state.messages.append({'role':'assistant','content':output})
