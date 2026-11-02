@@ -11,6 +11,9 @@ from dotenv import load_dotenv
 load_dotenv()
 import wikipedia
 
+## code
+####
+
 wikipedia.set_user_agent(
     "SearchEngineLLM/1.0 (educational project)"
 )
